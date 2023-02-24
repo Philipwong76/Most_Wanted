@@ -235,7 +235,61 @@ function searchForSpouse(people){
     })
 }
 
+//complete
+function searchByTraits(people){
+    let numberOfTraits = promptFor("How many traits would you like to search by?", chars)
+    let searchResults 
+    console.log(numberOfTraits)
+    switch (numberOfTraits) {
+        case '1':
+            let trait = promptFor("Which trait would you like to search by? \n 'eyecolor' \n 'id' \n 'gender \n 'weight' \n 'height' " , chars)
+            if (trait == 'eyecolor' ) {
+                searchResults = searchByEye(people);
+                break;
+            }
+            
+            if (trait == 'id' ) {
+                searchResults = searchById(people);
+                break;
+            }
 
+            if (trait == 'gender' ) {
+                searchResults = searchByGender(people);
+                break;
+            }
+
+            if (trait == 'weight' ) {
+                searchResults = searchByWeight(people);
+                break;
+            }
+
+            if (trait == 'height' ) {
+                searchResults = searchByHeight(people);
+                break;
+            }
+
+            if (!searchResults[0]) {
+                alert("Could not be found by trait.");
+                return searchByTraits(people);
+            }
+            break;
+        case "2":
+
+            break;
+        case "3":
+
+            break;
+        case "4":
+
+            break;
+        case "5":
+
+        default:
+            app(people);
+            break;
+    }
+    return searchResults
+}
 
 // trait function
 
