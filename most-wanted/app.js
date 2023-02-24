@@ -278,3 +278,16 @@ function searchByHeight(people){
         }
     })
 }
+
+// Weight trait
+function searchByWeight(people){
+    let userInputID3 = parseInt(promptFor("Do you know the person's height?",chars))
+
+    return people.filter(function(peopleArray2){
+        if (peopleArray2.weight == userInputID3){
+            return peopleArray2
+        }
+    })
+}
+
+//End of physical attribute traits
