@@ -267,3 +267,14 @@ function searchByEye(people){
     let eyeColor = promptFor('What eye color would you like to select? \n "green" \n "brown" \n "blue" \n "hazel" ',chars)
     return people.filter(function(person){return (person.eyeColor.includes(eyeColor))})
 }
+
+// Height trait
+function searchByHeight(people){
+    let userInputID2 = parseInt(promptFor("Do you know the person's height?",chars))
+
+    return people.filter(function(peopleArray1){
+        if (peopleArray1.height == userInputID2){
+            return peopleArray1
+        }
+    })
+}
