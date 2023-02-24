@@ -234,3 +234,18 @@ function searchForSpouse(people){
         return person.currentSpouse.includes(item.id)
     })
 }
+
+
+
+// trait function
+
+// ID trait
+function searchById(people){
+    let userInputID = parseInt(promptFor("Do you know the peron's id number?",chars))
+
+    return people.filter(function(elementOfArrayOfPeople){
+        if (elementOfArrayOfPeople.id == userInputID){
+            return elementOfArrayOfPeople
+        }
+    })
+}
