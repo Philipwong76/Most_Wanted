@@ -261,3 +261,9 @@ function searchByGender(people){
     let gender = promptFor('What gender would you like to select? \n "male" or "female".',chars)
     return people.filter(function(person){return (person.gender.includes(gender))})
 }
+
+// Eye color Trait
+function searchByEye(people){
+    let eyeColor = promptFor('What eye color would you like to select? \n "green" \n "brown" \n "blue" \n "hazel" ',chars)
+    return people.filter(function(person){return (person.eyeColor.includes(eyeColor))})
+}
