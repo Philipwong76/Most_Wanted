@@ -237,7 +237,7 @@ function searchForSpouse(people){
 
 //complete
 function searchByTraits(people){
-    let numberOfTraits = promptFor("How many traits would you like to search by?", chars)
+    let numberOfTraits = promptFor("How many traits would you like to search by? (1-5 traits)", chars)
     let searchResults 
     console.log(numberOfTraits)
     switch (numberOfTraits) {
@@ -274,6 +274,62 @@ function searchByTraits(people){
             }
             break;
         case "2":
+            let trait1 = promptFor("What is the first trait would you like to search by? \n 'eyecolor' \n 'id' \n 'gender \n 'weight' \n 'height' " , chars)
+            if (trait1 == 'eyecolor' ) {
+                searchResults = searchByEye(people);
+
+            }
+            
+            if (trait1 == 'id' ) {
+                searchResults = searchById(people);
+
+            }
+
+            if (trait1 == 'gender' ) {
+                searchResults = searchByGender(people);
+
+            }
+
+            if (trait1 == 'weight' ) {
+                searchResults = searchByWeight(people);
+
+            }
+
+            if (trait1 == 'height' ) {
+                searchResults = searchByHeight(people);
+
+            }
+
+            let trait2 = promptFor("What is the second trait would you like to search by? \n 'eyecolor' \n 'id' \n 'gender \n 'weight' \n 'height' " , chars)
+            if (trait2 == 'eyecolor' ) {
+                searchResults = searchByEye(people);
+                break;
+            }
+            
+            if (trait2 == 'id' ) {
+                searchResults = searchById(people);
+                break;
+            }
+
+            if (trait2 == 'gender' ) {
+                searchResults = searchByGender(people);
+                break;
+            }
+
+            if (trait2 == 'weight' ) {
+                searchResults = searchByWeight(people);
+                break;
+            }
+
+            if (trait2 == 'height' ) {
+                searchResults = searchByHeight(people);
+                break;
+            }
+
+            if (!searchResults[0]) {
+                alert("Could not be found by trait.");
+                return searchByTraits(people);
+            }
 
             break;
         case "3":
