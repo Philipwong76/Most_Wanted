@@ -249,3 +249,9 @@ function searchById(people){
         }
     })
 }
+
+// Eye color Trait
+function searchByEye(people){
+    let eyeColor = promptFor('What eye color would you like to select? \n "green" \n "brown" \n "blue" \n "hazel" ',chars)
+    return people.filter(function(person){return (person.eyeColor.includes(eyeColor))})
+}
