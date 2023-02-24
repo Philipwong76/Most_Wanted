@@ -509,10 +509,127 @@ function searchByTraits(people){
                 alert("Could not be found by trait.");
                 return searchByTraits(people);
             }
-
             break;
         case "5":
+            let trait51 = promptFor("What is the first trait would you like to search by? \n 'eyecolor' \n 'id' \n 'gender \n 'weight' \n 'height' " , chars)
+            if (trait51 == 'eyecolor' ) {
+                searchResults = searchByEye(people);
 
+            }
+            
+            if (trait51 == 'id' ) {
+                searchResults = searchById(people);
+
+            }
+
+            if (trait51 == 'gender' ) {
+                searchResults = searchByGender(people);
+
+            }
+
+            if (trait51 == 'weight' ) {
+                searchResults = searchByWeight(people);
+
+            }
+
+            if (trait51 == 'height' ) {
+                searchResults = searchByHeight(people);
+
+            }
+
+            let trait52 = promptFor("What is the second trait would you like to search by? \n 'eyecolor' \n 'id' \n 'gender \n 'weight' \n 'height' " , chars)
+            if (trait52 == 'eyecolor' ) {
+                searchResults = searchByEye(people);
+            }
+            
+            if (trait52 == 'id' ) {
+                searchResults = searchById(people);
+            }
+
+            if (trait52 == 'gender' ) {
+                searchResults = searchByGender(people);
+            }
+
+            if (trait52 == 'weight' ) {
+                searchResults = searchByWeight(people);
+            }
+
+            if (trait52 == 'height' ) {
+                searchResults = searchByHeight(people);
+            }
+
+            let trait53 = promptFor("What is the thrid trait would you like to search by? \n 'eyecolor' \n 'id' \n 'gender \n 'weight' \n 'height' " , chars)
+            if (trait53 == 'eyecolor' ) {
+                searchResults = searchByEye(people);
+            }
+            
+            if (trait53 == 'id' ) {
+                searchResults = searchById(people);
+            }
+
+            if (trait53 == 'gender' ) {
+                searchResults = searchByGender(people);
+            }
+
+            if (trait53 == 'weight' ) {
+                searchResults = searchByWeight(people);
+            }
+
+            if (trait53 == 'height' ) {
+                searchResults = searchByHeight(people);
+            }
+
+            let trait54 = promptFor("What is the forth trait would you like to search by? \n 'eyecolor' \n 'id' \n 'gender \n 'weight' \n 'height' " , chars)
+            if (trait54 == 'eyecolor' ) {
+                searchResults = searchByEye(people);
+            }
+            
+            if (trait54 == 'id' ) {
+                searchResults = searchById(people);
+            }
+
+            if (trait54 == 'gender' ) {
+                searchResults = searchByGender(people);
+            }
+
+            if (trait54 == 'weight' ) {
+                searchResults = searchByWeight(people);
+            }
+
+            if (trait54 == 'height' ) {
+                searchResults = searchByHeight(people);
+            }
+
+            let trait55 = promptFor("What is the fifth trait would you like to search by? \n 'eyecolor' \n 'id' \n 'gender \n 'weight' \n 'height' " , chars)
+            if (trait55 == 'eyecolor' ) {
+                searchResults = searchByEye(people);
+                break;
+            }
+            
+            if (trait55 == 'id' ) {
+                searchResults = searchById(people);
+                break;
+            }
+
+            if (trait55 == 'gender' ) {
+                searchResults = searchByGender(people);
+                break;
+            }
+
+            if (trait55 == 'weight' ) {
+                searchResults = searchByWeight(people);
+                break;
+            }
+
+            if (trait55 == 'height' ) {
+                searchResults = searchByHeight(people);
+                break;
+            }
+            if (!searchResults[0]) {
+                alert("Could not be found by trait.");
+                return searchByTraits(people);
+            }
+            break;
         default:
             app(people);
             break;
