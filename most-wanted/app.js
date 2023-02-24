@@ -333,6 +333,82 @@ function searchByTraits(people){
 
             break;
         case "3":
+            let trait31 = promptFor("What is the first trait would you like to search by? \n 'eyecolor' \n 'id' \n 'gender \n 'weight' \n 'height' " , chars)
+            if (trait31 == 'eyecolor' ) {
+                searchResults = searchByEye(people);
+
+            }
+            
+            if (trait31 == 'id' ) {
+                searchResults = searchById(people);
+
+            }
+
+            if (trait31 == 'gender' ) {
+                searchResults = searchByGender(people);
+
+            }
+
+            if (trait31 == 'weight' ) {
+                searchResults = searchByWeight(people);
+
+            }
+
+            if (trait31 == 'height' ) {
+                searchResults = searchByHeight(people);
+
+            }
+
+            let trait32 = promptFor("What is the second trait would you like to search by? \n 'eyecolor' \n 'id' \n 'gender \n 'weight' \n 'height' " , chars)
+            if (trait32 == 'eyecolor' ) {
+                searchResults = searchByEye(people);
+            }
+            
+            if (trait32 == 'id' ) {
+                searchResults = searchById(people);
+            }
+
+            if (trait32 == 'gender' ) {
+                searchResults = searchByGender(people);
+            }
+
+            if (trait32 == 'weight' ) {
+                searchResults = searchByWeight(people);
+            }
+
+            if (trait32 == 'height' ) {
+                searchResults = searchByHeight(people);
+            }
+
+            let trait33 = promptFor("What is the third trait would you like to search by? \n 'eyecolor' \n 'id' \n 'gender \n 'weight' \n 'height' " , chars)
+            if (trait33 == 'eyecolor' ) {
+                searchResults = searchByEye(people);
+                break;
+            }
+            
+            if (trait33 == 'id' ) {
+                searchResults = searchById(people);
+                break;
+            }
+
+            if (trait33 == 'gender' ) {
+                searchResults = searchByGender(people);
+                break;
+            }
+
+            if (trait33 == 'weight' ) {
+                searchResults = searchByWeight(people);
+                break;
+            }
+
+            if (trait33 == 'height' ) {
+                searchResults = searchByHeight(people);
+                break;
+            }
+            if (!searchResults[0]) {
+                alert("Could not be found by trait.");
+                return searchByTraits(people);
+            }
 
             break;
         case "4":
