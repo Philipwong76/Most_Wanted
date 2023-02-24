@@ -192,3 +192,45 @@ function chars(input) {
 
 //////////////////////////////////////////* End Of Starter Code *//////////////////////////////////////////
 // Any additional functions can be written below this line 👇. Happy Coding! 😁
+
+// Find the person's family objective 1 established
+function findPersonFamily(person, people){
+    let personFamily = `Parents: ${person.parents}\n`;
+    personFamily += `Currentspouse: ${person.currentSpouse}\n`;
+    personFamily += `Siblings: ${searchForSiblings(person, people)}\n`;
+
+
+    if (!personFamily[0]) {
+        alert("Could not find person's family.");
+        return mainMenu(people);
+    }
+    alert(personFamily);
+}
+
+//Start of Family
+//Family Traits
+// Parent trait
+function searchByParents(people){
+    return people.filter(function(item){
+        return person.parents.includes(item.id)
+    });
+}
+
+// Siblings trait
+function searchForSiblings(person, people){
+    let foundSiblings = people.filter(function(item){
+        return (
+        person.parents.includes(item.parents[0]) || 
+        person.parents.includes(item.parents[1])
+        );
+    });
+    return displayPeople(foundSiblings);
+}
+
+
+// Spouse trait
+function searchForSpouse(people){
+    return people.filter(function(item){
+        return person.currentSpouse.includes(item.id)
+    })
+}
