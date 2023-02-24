@@ -691,3 +691,12 @@ function searchByWeight(people){
 }
 
 //End of physical attribute traits
+
+function findPersonDescendants(person , people) {
+    let foundDescendants = people.filter(function (item) {
+        if (item.parents.includes(person.id)) {
+            return true;
+        }
+    });
+    displayPeople(foundDescendants);
+}
